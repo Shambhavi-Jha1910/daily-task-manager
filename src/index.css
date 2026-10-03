@@ -1,0 +1,120 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+.navbar {
+  background: #4f46e5;
+  color: white;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 500;
+}
+
+.navbar a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 560px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+.task-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.task-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.task-form select, .task-form button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+}
+
+.task-form button {
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+}
+
+.error { color: #dc2626; width: 100%; font-size: 14px; }
+
+.filters { margin-bottom: 16px; display: flex; gap: 8px; }
+
+.filters button {
+  padding: 6px 14px;
+  border: 1px solid #4f46e5;
+  background: white;
+  color: #4f46e5;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.filters button.active {
+  background: #4f46e5;
+  color: white;
+}
+
+.task-list { list-style: none; }
+
+.task-item {
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.task-item.done .task-text {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.task-text { flex: 1; }
+
+.badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+.badge.high { background: #fee2e2; color: #b91c1c; }
+.badge.medium { background: #fef3c7; color: #b45309; }
+.badge.low { background: #dcfce7; color: #15803d; }
+
+.task-item button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #e5e7eb;
+  cursor: pointer;
+}
+
+.task-item button.delete { background: #fee2e2; color: #b91c1c; }
+
+.edit-input { flex: 1; padding: 6px; border: 1px solid #ccc; border-radius: 6px; }
+
+.empty { text-align: center; color: #6b7280; margin-top: 24px; }
